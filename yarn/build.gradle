@@ -30,7 +30,8 @@ task installYarn(type: NpmTask) {
 
 task installNpmPackages() {
     doLast {
-        'npm run yarn'.execute()
+        // Runs "yarn" package script.
+        'npm run-script yarn'.execute()
     }
     dependsOn installYarn
 }
